@@ -3,10 +3,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.packtpub.wflydevelopment.chapter3</groupId>
+    <groupId>com.packtpub.wflydevelopment</groupId>
     <artifactId>ticket-agency</artifactId>
-    <version>1.0</version>
-    <relativePath>../pom.xml</relativePath>
+    <version>1.0.0.Alpha6-SNAPSHOT</version>
   </parent>
 
   <artifactId>ticket-agency-ejb-client</artifactId>
@@ -14,9 +13,6 @@
   <name>ticket-agency-ejb-client</name>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
     <version.wildfly>10.0.0.Beta2</version.wildfly>
   </properties>
 
@@ -35,7 +31,7 @@
   <dependencies>
     <!-- We depend on the EJB remote business interfaces of this application -->
     <dependency>
-      <groupId>com.packtpub.wflydevelopment.chapter3</groupId>
+      <groupId>com.packtpub.wflydevelopment</groupId>
       <artifactId>ticket-agency-ejb</artifactId>
       <type>ejb-client</type>
       <version>${project.version}</version>

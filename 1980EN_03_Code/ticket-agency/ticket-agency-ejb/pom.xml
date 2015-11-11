@@ -3,20 +3,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.packtpub.wflydevelopment.chapter3</groupId>
+    <groupId>com.packtpub.wflydevelopment</groupId>
     <artifactId>ticket-agency</artifactId>
-    <version>1.0</version>
-    <relativePath>../pom.xml</relativePath>
+    <version>1.0.0.Alpha6-SNAPSHOT</version>
   </parent>
 
   <artifactId>ticket-agency-ejb</artifactId>
   <packaging>ejb</packaging>
   <name>ticket-agency-ejb</name>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-  </properties>
 
   <dependencies>
     <dependency>
@@ -35,7 +29,6 @@
   </dependencies>
 
   <build>
-    <finalName>${project.artifactId}</finalName>
     <plugins>
       <!-- WildFly plugin to deploy the application -->
       <plugin>

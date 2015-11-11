@@ -3,19 +3,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.packtpub.wflydevelopment.chapter5</groupId>
+  <parent>
+    <groupId>com.packtpub.wflydevelopment</groupId>
+    <artifactId>wflydevelopment-parent</artifactId>
+    <version>1.0.0.Alpha6-SNAPSHOT</version>
+    <relativePath>../../</relativePath>
+  </parent>
+
   <artifactId>ticket-agency-jpa</artifactId>
-  <version>1.0</version>
   <packaging>jar</packaging>
 
   <name>ticket-agency-jpa</name>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-    <version.wildfly.swarm>1.0.0.Alpha5-SNAPSHOT</version.wildfly.swarm>
     <version.postgresql>9.4-1202-jdbc42</version.postgresql>
+    <version.org.webjars.bootstrap>3.3.5</version.org.webjars.bootstrap>
+    <version.org.webjars.jquery>1.11.3</version.org.webjars.jquery>
   </properties>
 
   <dependencies>
@@ -49,18 +52,17 @@
     <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>bootstrap</artifactId>
-      <version>3.3.5</version>
+      <version>${version.org.webjars.bootstrap}</version>
     </dependency>
+
     <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>jquery</artifactId>
-      <version>1.11.3</version>
+      <version>${version.org.webjars.jquery}</version>
     </dependency>
   </dependencies>
 
   <build>
-    <finalName>${project.artifactId}</finalName>
-
     <resources>
       <resource>
         <directory>src/main/resources</directory>
@@ -72,7 +74,6 @@
       <plugin>
         <groupId>org.wildfly.swarm</groupId>
         <artifactId>wildfly-swarm-plugin</artifactId>
-        <version>${version.wildfly.swarm}</version>
         <configuration>
           <mainClass>com.packtpub.wflydevelopment.chapter5.App</mainClass>
         </configuration>
@@ -83,15 +84,6 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.1</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
       </plugin>
     </plugins>
   </build>

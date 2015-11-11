@@ -2,19 +2,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.packtpub.wflydevelopment.chapter3</groupId>
+  <parent>
+    <groupId>com.packtpub.wflydevelopment</groupId>
+    <artifactId>wflydevelopment-parent</artifactId>
+    <version>1.0.0.Alpha6-SNAPSHOT</version>
+    <relativePath>../../</relativePath>
+  </parent>
+
   <artifactId>ticket-agency</artifactId>
-  <version>1.0</version>
   <packaging>pom</packaging>
 
   <name>ticket-agency</name>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-    <version.wildfly.swarm>1.0.0.Alpha5-SNAPSHOT</version.wildfly.swarm>
-  </properties>
 
   <modules>
     <module>ticket-agency-ejb</module>

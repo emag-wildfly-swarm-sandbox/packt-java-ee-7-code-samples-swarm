@@ -3,9 +3,7 @@ package com.packtpub.wflydevelopment.chapter5;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.ClassLoaderAsset;
 import org.wildfly.swarm.container.Container;
-import org.wildfly.swarm.datasources.Datasource;
 import org.wildfly.swarm.datasources.DatasourcesFraction;
-import org.wildfly.swarm.datasources.Driver;
 import org.wildfly.swarm.undertow.WARArchive;
 
 /**
@@ -17,15 +15,17 @@ public class App {
 
     Container container = new Container();
 
-    container.subsystem(new DatasourcesFraction()
-        .driver(
-          new Driver("org.postgresql")
-            .xaDatasourceClassName("org.postgresql.xa.PGXADataSource")
-            .module("org.postgresql"))
-        .datasource(new Datasource("wildflydevelopment")
-          .driver("org.postgresql")
-          .connectionURL("jdbc:postgresql://localhost:5432/ticketsystem")
-          .authentication("ticketsystem", "ticketsystem"))
+    container.fraction(new DatasourcesFraction()
+      .jdbcDriver("org.postgresql", (d) -> {
+        d.xaDatasourceClass("org.postgresql.xa.PGXADataSource");
+        d.driverModuleName("org.postgresql");
+      })
+      .dataSource("wildflydevelopment", (ds) -> {
+        ds.driverName("org.postgresql");
+        ds.connectionUrl("jdbc:postgresql://localhost:5432/ticketsystem");
+        ds.userName("ticketsystem");
+        ds.password("ticketsystem");
+      })
     );
 
     container.start();
