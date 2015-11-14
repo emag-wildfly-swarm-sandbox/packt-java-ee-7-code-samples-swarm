@@ -23,6 +23,22 @@
 
   <dependencies>
     <dependency>
+      <groupId>org.jboss.resteasy</groupId>
+      <artifactId>resteasy-client</artifactId>
+      <version>${version.resteasy-client}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.resteasy</groupId>
+      <artifactId>resteasy-json-p-provider</artifactId>
+      <version>${version.resteasy-client}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.resteasy</groupId>
+      <artifactId>resteasy-jackson-provider</artifactId>
+      <version>${version.resteasy-client}</version>
+    </dependency>
+
+    <dependency>
       <groupId>com.packtpub.wflydevelopment</groupId>
       <artifactId>ticket-agency-ws</artifactId>
       <version>${project.parent.version}</version>

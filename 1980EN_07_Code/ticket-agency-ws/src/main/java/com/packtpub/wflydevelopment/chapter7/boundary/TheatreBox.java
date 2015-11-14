@@ -72,7 +72,7 @@ public class TheatreBox {
   }
 
   @Lock(LockType.READ)
-  private Seat getSeat(int seatId) {
+  public Seat getSeat(int seatId) {
     return seats.get(seatId);
   }
 
