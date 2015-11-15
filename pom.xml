@@ -48,6 +48,7 @@
     <module>1980EN_03_Code/ticket-agency</module>
     <module>1980EN_04_Code/ticket-agency-cdi</module>
     <module>1980EN_05_Code/ticket-agency-jpa</module>
+    <module>1980EN_06_Code/ticket-agency-jms</module>
     <module>1980EN_07_Code/ticket-agency-ws</module>
     <module>1980EN_07_Code/ticket-agency-ws-client</module>
   </modules>
