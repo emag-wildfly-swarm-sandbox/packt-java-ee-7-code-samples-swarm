@@ -51,6 +51,7 @@
     <module>1980EN_06_Code/ticket-agency-jms</module>
     <module>1980EN_07_Code/ticket-agency-ws</module>
     <module>1980EN_07_Code/ticket-agency-ws-client</module>
+    <module>1980EN_08_Code/ticket-agency-websockets</module>
   </modules>
 
 </project>
