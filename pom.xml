@@ -52,6 +52,7 @@
     <module>1980EN_07_Code/ticket-agency-ws</module>
     <module>1980EN_07_Code/ticket-agency-ws-client</module>
     <module>1980EN_08_Code/ticket-agency-websockets</module>
+    <module>1980EN_09_Code/management-api</module>
   </modules>
 
 </project>

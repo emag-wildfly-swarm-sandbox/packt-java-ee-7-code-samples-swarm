@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>management-api</artifactId>
+    <groupId>com.packtpub.wflydevelopment</groupId>
+    <version>1.0.0.Alpha6-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>client</artifactId>
+
+  <properties>
+    <version.wildfly-controller-client>2.0.0.CR8</version.wildfly-controller-client>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.wildfly.core</groupId>
+      <artifactId>wildfly-controller-client</artifactId>
+      <version>${version.wildfly-controller-client}</version>
+    </dependency>
+  </dependencies>
+
+</project>
