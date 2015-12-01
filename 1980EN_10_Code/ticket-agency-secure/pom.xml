@@ -40,11 +40,11 @@
       <artifactId>wildfly-swarm-weld</artifactId>
       <version>${version.wildfly.swarm}</version>
     </dependency>
-    <!--<dependency>-->
-      <!--<groupId>org.wildfly.swarm</groupId>-->
-      <!--<artifactId>wildfly-swarm-security</artifactId>-->
-      <!--<version>${version.wildfly.swarm}</version>-->
-    <!--</dependency>-->
+    <dependency>
+      <groupId>org.wildfly.swarm</groupId>
+      <artifactId>wildfly-swarm-management</artifactId>
+      <version>${version.wildfly.swarm}</version>
+    </dependency>
 
     <dependency>
       <groupId>org.jboss.logging</groupId>
