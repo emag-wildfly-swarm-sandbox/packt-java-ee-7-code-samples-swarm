@@ -30,7 +30,11 @@
     </auth-constraint>
   </security-constraint>
   <login-config>
-    <auth-method>BASIC</auth-method>
+    <auth-method>FORM</auth-method>
+    <form-login-config>
+      <form-login-page>/faces/login.xhtml</form-login-page>
+      <form-error-page>/faces/error.xhtml</form-error-page>
+    </form-login-config>
   </login-config>
 
   <security-role>

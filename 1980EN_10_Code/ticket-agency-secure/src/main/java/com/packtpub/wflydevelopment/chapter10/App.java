@@ -30,6 +30,10 @@ public class App {
     deployment.addAsWebResource(
       new ClassLoaderAsset("index.xhtml", App.class.getClassLoader()), "index.xhtml");
     deployment.addAsWebResource(
+      new ClassLoaderAsset("login.xhtml", App.class.getClassLoader()), "login.xhtml");
+    deployment.addAsWebResource(
+      new ClassLoaderAsset("error.xhtml", App.class.getClassLoader()), "error.xhtml");
+    deployment.addAsWebResource(
       new ClassLoaderAsset("resources/style.css", App.class.getClassLoader()), "resources/style.css");
 
     deployment.addAsWebInfResource(
