@@ -54,6 +54,7 @@
     <module>1980EN_08_Code/ticket-agency-websockets</module>
     <module>1980EN_09_Code/management-api</module>
     <module>1980EN_10_Code/ticket-agency-secure</module>
+    <module>1980EN_11_Code/ticket-agency-cluster</module>
   </modules>
 
 </project>

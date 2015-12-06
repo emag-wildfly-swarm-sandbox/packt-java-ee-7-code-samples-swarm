@@ -1,0 +1,8 @@
+batch
+
+/subsystem=infinispan/cache-container=tickets:add(default-cache=default,jndi-name="java:jboss/infinispan/tickets",module="deployment.ticket-agency-cluster.jar")
+/subsystem=infinispan/cache-container=tickets/transport=TRANSPORT:add(lock-timeout=60000)
+/subsystem=infinispan/cache-container=tickets/replicated-cache=default:add(batching=true,mode=SYNC)
+/subsystem=infinispan/cache-container=tickets/replicated-cache=default/component=locking:add(isolation=REPEATABLE_READ)
+
+run-batch
